@@ -74,6 +74,7 @@ export const projects = [
     name: 'Clyng.io',
     role: 'End-to-End Engineer',
     tags: ['Churn Analytics', 'Retention Playbooks', 'Subscription E-commerce'],
+    stack: ['React', 'Supabase', 'n8n', 'Stripe', 'Email & SMS Automation'],
     description:
       'Subscription e-commerce owners struggle with churn, so I built a platform that both monitors it and takes action to retain customers — because keeping a customer is far cheaper than acquiring a new one. Clyng tracks voluntary and involuntary churn, recovered revenue and conversion in a live dashboard, and runs automated retention playbooks that engage at-risk subscribers the moment they cancel.',
     highlights: [
@@ -90,6 +91,7 @@ export const projects = [
     name: 'AI Caller Bot',
     role: 'Developer',
     tags: ['Voice AI', 'n8n', 'Lead Qualification'],
+    stack: ['n8n', 'OpenAI', 'Supabase', 'Voice AI', 'Webhooks'],
     description:
       'A full-scale AI calling system that qualifies leads or sells products over the phone. Sophisticated backend automation either searches Google for leads on its own or processes lists you upload — a CSV batch pipeline runs calls in parallel, while a chat-driven AI agent orchestrates voice calls, contact processing and lead search sequentially.',
     highlights: [
@@ -105,6 +107,7 @@ export const projects = [
     name: 'LinkedIn Connection Requester',
     role: 'Developer',
     tags: ['Lead Magnet', 'Outreach', 'PhantomBuster'],
+    stack: ['n8n', 'OpenAI', 'Apify', 'PhantomBuster', 'Google Sheets'],
     description:
       'Finds exactly the people you need and sends each one a personalized LinkedIn connection request, so the moment they accept you can strike up a real conversation. It scrapes targeted prospects, loops through each one to generate a personalized message with AI, logs everything to Google Sheets and triggers the outreach — it works for landing jobs or sales. The possibilities are endless.',
     highlights: [
@@ -115,6 +118,25 @@ export const projects = [
     images: [
       { src: linkedinWorkflow, alt: 'LinkedIn outreach automation workflow' },
     ],
+  },
+]
+
+export const moreProjects = [
+  {
+    icon: 'docs',
+    name: 'Automated Quiz Release & Grading',
+    role: 'Automation Developer',
+    description:
+      'A release, access-control, grading and notification system spanning Microsoft Forms and SharePoint. Quizzes go out on schedule to exactly the right people, submissions are graded automatically, and results land in SharePoint with notifications sent — zero manual steps for the teacher.',
+    stack: ['Power Automate', 'SharePoint', 'Microsoft Forms'],
+  },
+  {
+    icon: 'board',
+    name: 'InwardStyle — Client Operating System',
+    role: 'Automation Developer',
+    description:
+      'A focused Airtable-based operating system that keeps prospects, consultations, next actions and exceptions moving without burdening the owner. Airtable is the single source of truth, Make.com runs the automations behind it, and Google Calendar keeps every consultation in sync.',
+    stack: ['Airtable', 'Make.com', 'Google Calendar'],
   },
 ]
 

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { profile, stats, services, projects, tools, reasons } from './data.js'
+import { profile, stats, services, projects, moreProjects, tools, reasons } from './data.js'
 import avatar from './assets/avatar.jpg'
 
 /* ---------- tiny inline icon set ---------- */
@@ -248,6 +248,40 @@ function Projects({ onZoom }) {
                       </li>
                     ))}
                   </ul>
+                  <div className="stack">
+                    <span className="stack__label">Built with</span>
+                    <div className="stack__chips">
+                      {p.stack.map((t) => (
+                        <span key={t} className="stack__chip">{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal>
+          <h3 className="more-title">More Projects</h3>
+        </Reveal>
+        <div className="more-grid">
+          {moreProjects.map((p, i) => (
+            <Reveal key={p.name} delay={i * 90}>
+              <article className="card more-card">
+                <div className="service__icon">
+                  <Icon name={p.icon} />
+                </div>
+                <h3>{p.name}</h3>
+                <p className="project__role">{p.role}</p>
+                <p className="more-card__text">{p.description}</p>
+                <div className="stack">
+                  <span className="stack__label">Built with</span>
+                  <div className="stack__chips">
+                    {p.stack.map((t) => (
+                      <span key={t} className="stack__chip">{t}</span>
+                    ))}
+                  </div>
                 </div>
               </article>
             </Reveal>

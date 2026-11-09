@@ -439,6 +439,56 @@ h3 { font-size: 1.12rem; font-weight: 700; }
   transform: translateY(2px);
 }
 
+/* ---------- tech stack chips ---------- */
+.stack {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.stack__label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+.stack__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.stack__chip {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 13px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+/* ---------- more projects ---------- */
+.more-title {
+  margin-top: 80px;
+  font-size: 1.35rem;
+}
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 26px;
+}
+.more-card .project__role {
+  margin-bottom: 10px;
+}
+.more-card__text {
+  color: var(--text-dim);
+  font-size: 0.94rem;
+}
+
 /* ---------- tools ---------- */
 .tools {
   display: flex;
@@ -602,7 +652,8 @@ h3 { font-size: 1.12rem; font-weight: 700; }
     width: calc(100% - 32px);
   }
   .services-grid,
-  .reasons {
+  .reasons,
+  .more-grid {
     grid-template-columns: 1fr;
   }
   .nav__toggle {
