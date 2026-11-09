@@ -295,7 +295,7 @@ h3 { font-size: 1.12rem; font-weight: 700; }
 
 /* ---------- about ---------- */
 .about {
-  padding: 30px 0 10px;
+  padding: 90px 0 0;
 }
 .about__text {
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);

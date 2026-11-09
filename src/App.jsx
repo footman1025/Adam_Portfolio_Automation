@@ -71,8 +71,8 @@ function Reveal({ children, delay = 0, className = '' }) {
 
 /* ---------- navigation ---------- */
 const navLinks = [
-  { href: '#services', label: 'What I Do' },
   { href: '#projects', label: 'Projects' },
+  { href: '#services', label: 'What I Do' },
   { href: '#tools', label: 'Tools' },
   { href: '#why-me', label: 'Why Me' },
 ]
@@ -407,9 +407,9 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <Projects onZoom={setZoomed} />
         <About />
         <Services />
-        <Projects onZoom={setZoomed} />
         <Tools />
         <WhyMe />
         <Contact />
