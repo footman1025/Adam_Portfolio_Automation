@@ -361,6 +361,7 @@ function Contact() {
       <div className="container">
         <Reveal>
           <div className="contact__card">
+            <p className="eyebrow">Contact</p>
             <h2>Tell me what's eating your time</h2>
             <p>
               I'll map the workflow and automate it end to end. Clear milestones,
@@ -374,6 +375,9 @@ function Contact() {
                 Starting at <strong>{profile.rate}</strong>
               </span>
             </div>
+            <a className="contact__email" href={`mailto:${profile.email}`}>
+              {profile.email}
+            </a>
           </div>
         </Reveal>
       </div>

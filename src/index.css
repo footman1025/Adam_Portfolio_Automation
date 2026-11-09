@@ -598,18 +598,50 @@ h3 { font-size: 1.12rem; font-weight: 700; }
   padding-bottom: 110px;
 }
 .contact__card {
+  position: relative;
+  overflow: hidden;
   text-align: center;
-  padding: clamp(40px, 7vw, 72px);
+  padding: clamp(48px, 7vw, 76px);
   border-radius: 28px;
   background:
-    radial-gradient(600px 300px at 50% -40%, var(--glow-1), transparent 70%),
-    var(--surface);
-  border: 1px solid var(--border);
+    radial-gradient(640px 320px at 50% -30%, var(--glow-1), transparent 70%),
+    linear-gradient(170deg, var(--surface), var(--surface-2));
+  border: 1px solid var(--accent-border);
+  box-shadow: 0 24px 70px var(--shadow-color);
+}
+.contact__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(360px, 70%);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
+}
+.contact__card .eyebrow {
+  justify-content: center;
+  width: 100%;
 }
 .contact__card p {
   color: var(--text-dim);
   max-width: 52ch;
   margin: 0 auto;
+}
+.contact__email {
+  display: inline-block;
+  margin-top: 26px;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px dashed var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.contact__email:hover {
+  color: var(--accent);
+  border-color: var(--accent-border);
 }
 .contact__actions {
   display: flex;
