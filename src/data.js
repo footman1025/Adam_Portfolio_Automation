@@ -71,23 +71,6 @@ export const services = [
 
 export const projects = [
   {
-    name: 'Clyng.io',
-    role: 'End-to-End Engineer',
-    tags: ['Churn Analytics', 'Retention Playbooks', 'Subscription E-commerce'],
-    stack: ['React', 'Supabase', 'n8n', 'Stripe', 'Email & SMS Automation'],
-    description:
-      'Subscription e-commerce owners struggle with churn, so I built a platform that both monitors it and takes action to retain customers — because keeping a customer is far cheaper than acquiring a new one. Clyng tracks voluntary and involuntary churn, recovered revenue and conversion in a live dashboard, and runs automated retention playbooks that engage at-risk subscribers the moment they cancel.',
-    highlights: [
-      'Real-time churn & revenue dashboard with 15-minute auto-sync',
-      'Automated retention playbooks triggered by cancellations',
-      'Recovery attribution across emails, SMS, discounts and calls',
-    ],
-    images: [
-      { src: clyngDashboard, alt: 'Clyng.io live churn and revenue dashboard' },
-      { src: clyngPlaybooks, alt: 'Clyng.io automated retention playbooks' },
-    ],
-  },
-  {
     name: 'AI Caller Bot',
     role: 'Developer',
     tags: ['Voice AI', 'n8n', 'Lead Qualification'],
@@ -117,6 +100,23 @@ export const projects = [
     ],
     images: [
       { src: linkedinWorkflow, alt: 'LinkedIn outreach automation workflow' },
+    ],
+  },
+  {
+    name: 'Clyng.io',
+    role: 'End-to-End Engineer',
+    tags: ['Churn Analytics', 'Retention Playbooks', 'Subscription E-commerce'],
+    stack: ['React', 'Supabase', 'n8n', 'Stripe', 'Email & SMS Automation'],
+    description:
+      'Subscription e-commerce owners struggle with churn, so I built a platform that both monitors it and takes action to retain customers — because keeping a customer is far cheaper than acquiring a new one. Clyng tracks voluntary and involuntary churn, recovered revenue and conversion in a live dashboard, and runs automated retention playbooks that engage at-risk subscribers the moment they cancel.',
+    highlights: [
+      'Real-time churn & revenue dashboard with 15-minute auto-sync',
+      'Automated retention playbooks triggered by cancellations',
+      'Recovery attribution across emails, SMS, discounts and calls',
+    ],
+    images: [
+      { src: clyngDashboard, alt: 'Clyng.io live churn and revenue dashboard' },
+      { src: clyngPlaybooks, alt: 'Clyng.io automated retention playbooks' },
     ],
   },
 ]
