@@ -17,6 +17,8 @@ const paths = {
   mail: 'M3.5 6h17v12h-17zM3.5 7l8.5 6.5L20.5 7',
   spark: 'M12 2l2.1 6.3L20.5 10l-6.4 1.7L12 18l-2.1-6.3L3.5 10l6.4-1.7z',
   arrow: 'M5 12h14M13 6l6 6-6 6',
+  sun: 'M12 4V2M12 22v-2M4 12H2M22 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z',
+  moon: 'M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z',
 }
 
 function Icon({ name, size = 22 }) {
@@ -77,7 +79,7 @@ const navLinks = [
   { href: '#why-me', label: 'Why Me' },
 ]
 
-function Nav() {
+function Nav({ theme, onToggleTheme }) {
   const [open, setOpen] = useState(false)
   return (
     <header className="nav">
@@ -96,16 +98,26 @@ function Nav() {
             Let's Talk
           </a>
         </nav>
-        <button
-          className="nav__toggle"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <div className="nav__actions">
+          <button
+            className="theme-btn"
+            aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+            title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+            onClick={onToggleTheme}
+          >
+            <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={18} />
+          </button>
+          <button
+            className="nav__toggle"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
     </header>
   )
@@ -402,9 +414,29 @@ function Lightbox({ image, onClose }) {
 
 export default function App() {
   const [zoomed, setZoomed] = useState(null)
+  const [theme, setTheme] = useState(() => {
+    try {
+      return localStorage.getItem('theme') || 'light'
+    } catch {
+      return 'light'
+    }
+  })
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    try {
+      localStorage.setItem('theme', theme)
+    } catch {
+      /* private mode — theme just won't persist */
+    }
+  }, [theme])
+
   return (
     <>
-      <Nav />
+      <Nav
+        theme={theme}
+        onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      />
       <main>
         <Hero />
         <Projects onZoom={setZoomed} />
