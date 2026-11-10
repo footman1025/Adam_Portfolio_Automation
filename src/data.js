@@ -237,24 +237,6 @@ export const projects = [
     ],
   },
   {
-    name: 'Automated Quiz Release & Grading',
-    role: 'Automation Developer',
-    category: 'Automation · Microsoft 365 Workflow',
-    icon: 'docs',
-    blurb:
-      'A release, access-control, grading and notification system spanning Microsoft Forms and SharePoint.',
-    tags: ['Microsoft 365', 'Education', 'Workflow'],
-    stack: ['Power Automate', 'SharePoint', 'Microsoft Forms'],
-    description:
-      'A release, access-control, grading and notification system spanning Microsoft Forms and SharePoint. Quizzes go out on schedule to exactly the right people, submissions are graded automatically, and results land in SharePoint with notifications sent — zero manual steps for the teacher.',
-    highlights: [
-      'Scheduled quiz release with per-group access control',
-      'Automatic grading of every submission',
-      'Results stored in SharePoint with instant notifications',
-    ],
-    images: [],
-  },
-  {
     name: 'Retail Operations Workspace',
     role: 'Workspace Architect',
     category: 'Operations · Notion Workspace',
