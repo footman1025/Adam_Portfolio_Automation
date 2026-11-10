@@ -2,6 +2,7 @@ import clyngDashboard from './assets/clyng-dashboard.jpg'
 import clyngPlaybooks from './assets/clyng-playbooks.jpg'
 import aiCallerWorkflow from './assets/ai-caller-workflow.jpg'
 import linkedinWorkflow from './assets/linkedin-workflow.jpg'
+import integrationWorkflows from './assets/integration-workflows.jpg'
 
 export const profile = {
   name: 'Adam Harari',
@@ -165,6 +166,26 @@ export const projects = [
       'Google Calendar sync for every consultation',
     ],
     images: [],
+  },
+  {
+    name: 'n8n, Zapier & Make Workflows',
+    role: 'Automation Engineer',
+    category: 'Automation · App Integrations',
+    icon: 'workflow',
+    blurb:
+      'Automations for the copy-paste work between your tools — leads scored and routed, invoices booked, alerts when something fails.',
+    tags: ['Workflow Automation', 'Integrations', 'Error Handling'],
+    stack: ['n8n', 'Zapier', 'Make', 'Slack', 'Gmail', 'Google Calendar'],
+    description:
+      'Automations for the copy-paste work between your tools. A new lead gets scored, added to the CRM and posted to Slack. A paid invoice updates the books and sends a thank-you. We map your process first, automate the slow parts, and add alerts for when something fails.',
+    highlights: [
+      'New leads scored, added to the CRM and posted to Slack automatically',
+      'Paid invoices update the books and trigger a thank-you on their own',
+      'Process mapped first, with failure alerts so nothing breaks silently',
+    ],
+    images: [
+      { src: integrationWorkflows, alt: 'Apps connected through n8n, Zapier and Make workflows' },
+    ],
   },
 ]
 
