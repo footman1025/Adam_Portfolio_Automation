@@ -268,10 +268,6 @@ function Projects({ onOpen }) {
   return (
     <section id="projects" className="section section--alt">
       <div className="container">
-        <Reveal>
-          <p className="eyebrow">Featured Projects</p>
-          <h2>Real systems, shipped and running</h2>
-        </Reveal>
         <div className="pgrid">
           {projects.map((p, i) => (
             <ProjectCard key={p.name} project={p} onOpen={onOpen} delay={(i % 2) * 80} />
