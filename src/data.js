@@ -4,6 +4,7 @@ import aiCallerWorkflow from './assets/ai-caller-workflow.jpg'
 import linkedinWorkflow from './assets/linkedin-workflow.jpg'
 import integrationWorkflows from './assets/integration-workflows.jpg'
 import crmAutomation from './assets/crm-automation.jpg'
+import retailWorkspace from './assets/retail-workspace.jpg'
 
 export const profile = {
   name: 'Adam Harari',
@@ -189,6 +190,26 @@ export const projects = [
       'Results stored in SharePoint with instant notifications',
     ],
     images: [],
+  },
+  {
+    name: 'Retail Operations Workspace',
+    role: 'Workspace Architect',
+    category: 'Operations · Notion Workspace',
+    icon: 'board',
+    blurb:
+      'A connected Notion workspace that replaced scattered spreadsheets, notes and paper for day-to-day retail operations.',
+    tags: ['Notion', 'Retail', 'Operations'],
+    stack: ['Notion', 'Linked Databases', 'Templates', 'Dashboards'],
+    description:
+      'A connected Notion workspace replaced scattered spreadsheets, notes, and paper. Linked databases, useful views, reusable templates, and a clear home dashboard made day-to-day retail operations navigable for non-technical staff.',
+    highlights: [
+      'Linked databases replacing scattered spreadsheets, notes and paper',
+      'Reusable templates and purpose-built views for daily tasks',
+      'A clear home dashboard non-technical staff can actually navigate',
+    ],
+    images: [
+      { src: retailWorkspace, alt: 'Notion retail operations workspace with linked databases and dashboard' },
+    ],
   },
 ]
 
