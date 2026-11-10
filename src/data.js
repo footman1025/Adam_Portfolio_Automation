@@ -7,6 +7,7 @@ import crmAutomation from './assets/crm-automation.jpg'
 import retailWorkspace from './assets/retail-workspace.jpg'
 import nonprofitWorkspace from './assets/nonprofit-workspace.jpg'
 import ghlLaunch from './assets/ghl-launch.jpg'
+import neuroadsAffiliate from './assets/neuroads-affiliate.jpg'
 
 export const profile = {
   name: 'Adam Harari',
@@ -112,6 +113,26 @@ export const projects = [
     ],
     images: [
       { src: ghlLaunch, alt: 'GoHighLevel course launch campaign connected to Stripe, Zapier and webhooks' },
+    ],
+  },
+  {
+    name: 'Affiliate Tracking Setup for NeuroAds',
+    role: 'Integration Engineer',
+    category: 'E-commerce · AI Chatbot',
+    icon: 'cart',
+    blurb:
+      'Connected affiliate referrals to a multilingual Shopify AI chatbot commerce journey through Shopify data and API integration.',
+    tags: ['Shopify', 'Affiliate Tracking', 'AI Chatbot'],
+    stack: ['Shopify', 'Affiliate Tracking', 'API Integration', 'AI Chatbot'],
+    description:
+      'NeuroAds is a multilingual Shopify AI chatbot for product recommendations, store questions, discount codes, order tracking, and live-agent handoff. This engagement connected affiliate referrals to the chatbot-assisted commerce journey through Shopify data, API integration, and performance analysis.',
+    highlights: [
+      'Affiliate referrals wired into the chatbot-assisted commerce journey',
+      'Shopify data and API integration powering referral attribution',
+      'Performance analysis across referrals, sales and commissions',
+    ],
+    images: [
+      { src: neuroadsAffiliate, alt: 'NeuroAds Shopify AI chatbot with affiliate tracking dashboard' },
     ],
   },
   {
