@@ -190,24 +190,6 @@ export const projects = [
     ],
     images: [],
   },
-  {
-    name: 'InwardStyle',
-    role: 'Automation Developer',
-    category: 'Automation · Airtable Client Operating System',
-    icon: 'board',
-    blurb:
-      'A focused client system that keeps prospects, consultations, next actions and exceptions moving without burdening the owner.',
-    tags: ['Airtable', 'Client Operations', 'Make.com'],
-    stack: ['Airtable', 'Make.com', 'Google Calendar'],
-    description:
-      'A focused Airtable-based operating system that keeps prospects, consultations, next actions and exceptions moving without burdening the owner. Airtable is the single source of truth, Make.com runs the automations behind it, and Google Calendar keeps every consultation in sync.',
-    highlights: [
-      'Airtable as the single source of truth for every client',
-      'Make.com automations drive next actions and exceptions',
-      'Google Calendar sync for every consultation',
-    ],
-    images: [],
-  },
 ]
 
 export const tools = [
