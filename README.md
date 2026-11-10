@@ -27,7 +27,6 @@ vercel
 ## Customize
 
 - All text content (bio, services, projects, tools, rate) lives in `src/data.js`.
-- The contact email is in `src/data.js` (`profile.email`) — swap it if you want a different address shown publicly.
 - Images are in `src/assets/`. Replace them and update the imports at the top of `src/data.js`.
 - Colors and fonts are CSS variables at the top of `src/index.css`.
 - To add LinkedIn/Upwork links, add buttons next to "Get in Touch" in the `Contact` component in `src/App.jsx`.

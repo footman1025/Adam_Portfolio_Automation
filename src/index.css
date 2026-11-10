@@ -628,21 +628,6 @@ h3 { font-size: 1.12rem; font-weight: 700; }
   max-width: 52ch;
   margin: 0 auto;
 }
-.contact__email {
-  display: inline-block;
-  margin-top: 26px;
-  font-family: var(--mono);
-  font-size: 0.9rem;
-  color: var(--text-dim);
-  text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 1px dashed var(--border);
-  transition: color 0.2s, border-color 0.2s;
-}
-.contact__email:hover {
-  color: var(--accent);
-  border-color: var(--accent-border);
-}
 .contact__actions {
   display: flex;
   flex-wrap: wrap;
@@ -651,13 +636,20 @@ h3 { font-size: 1.12rem; font-weight: 700; }
   gap: 22px;
   margin-top: 32px;
 }
-.contact__rate {
+.contact__rate-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 28px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
   color: var(--text-dim);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
 }
-.contact__rate strong {
-  color: var(--text);
+.contact__rate-badge strong {
+  color: var(--accent);
   font-family: var(--mono);
+  font-size: 1.05rem;
 }
 
 /* ---------- footer ---------- */

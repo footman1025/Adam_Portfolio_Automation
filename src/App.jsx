@@ -368,16 +368,10 @@ function Contact() {
               full ownership of everything I build, and support after launch.
             </p>
             <div className="contact__actions">
-              <a className="btn" href={`mailto:${profile.email}`}>
-                <Icon name="mail" size={18} /> Get in Touch
-              </a>
-              <span className="contact__rate">
-                Starting at <strong>{profile.rate}</strong>
+              <span className="contact__rate-badge">
+                Hourly rate&nbsp;<strong>{profile.rate}</strong>
               </span>
             </div>
-            <a className="contact__email" href={`mailto:${profile.email}`}>
-              {profile.email}
-            </a>
           </div>
         </Reveal>
       </div>

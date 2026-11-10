@@ -10,7 +10,6 @@ export const profile = {
     'I help E-commerce, Real Estate and SaaS companies turn messy data and scattered apps into clear dashboards and hands-off workflows.',
   pitch:
     'Clients come to me when they are losing hours pulling reports, copying data between tools, or have no visibility into revenue, churn or product performance. I build systems that give you clarity in minutes, not hours.',
-  email: 'luckyman428623@gmail.com',
   rate: '$80/hr',
   experience: '8+ years',
 }
