@@ -6,6 +6,7 @@ import integrationWorkflows from './assets/integration-workflows.jpg'
 import crmAutomation from './assets/crm-automation.jpg'
 import retailWorkspace from './assets/retail-workspace.jpg'
 import nonprofitWorkspace from './assets/nonprofit-workspace.jpg'
+import ghlLaunch from './assets/ghl-launch.jpg'
 
 export const profile = {
   name: 'Adam Harari',
@@ -91,6 +92,26 @@ export const projects = [
     ],
     images: [
       { src: integrationWorkflows, alt: 'Apps connected through n8n, Zapier and Make workflows' },
+    ],
+  },
+  {
+    name: 'GoHighLevel Launch System',
+    role: 'Automation Engineer',
+    category: 'Automation · Course Launches',
+    icon: 'workflow',
+    blurb:
+      'A repeatable launch system for a course business — every campaign scheduled, segmented, tested and monitored end to end.',
+    tags: ['GoHighLevel', 'Course Launches', 'Payments'],
+    stack: ['GoHighLevel', 'Stripe', 'Zapier', 'Webhooks'],
+    description:
+      'A repeatable launch-technology system for a course business, connecting GoHighLevel, Stripe, Zapier, email, and SMS. Each campaign is scheduled, segmented, tested through the full customer journey, and monitored during launch.',
+    highlights: [
+      'GoHighLevel, Stripe, Zapier, email and SMS connected into one launch stack',
+      'Every campaign scheduled, segmented and A/B tested through the full customer journey',
+      'Live monitoring during launch, from lead to checkout to course access',
+    ],
+    images: [
+      { src: ghlLaunch, alt: 'GoHighLevel course launch campaign connected to Stripe, Zapier and webhooks' },
     ],
   },
   {
