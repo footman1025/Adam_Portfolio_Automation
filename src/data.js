@@ -3,6 +3,7 @@ import clyngPlaybooks from './assets/clyng-playbooks.jpg'
 import aiCallerWorkflow from './assets/ai-caller-workflow.jpg'
 import linkedinWorkflow from './assets/linkedin-workflow.jpg'
 import integrationWorkflows from './assets/integration-workflows.jpg'
+import crmAutomation from './assets/crm-automation.jpg'
 
 export const profile = {
   name: 'Adam Harari',
@@ -88,6 +89,26 @@ export const projects = [
     ],
     images: [
       { src: integrationWorkflows, alt: 'Apps connected through n8n, Zapier and Make workflows' },
+    ],
+  },
+  {
+    name: 'CRM Setup & Automation',
+    role: 'Automation Engineer',
+    category: 'Automation · CRM',
+    icon: 'crm',
+    blurb:
+      'Leads from every channel into one pipeline, follow-ups that stop when someone replies, reminders that cut no-shows.',
+    tags: ['CRM', 'Pipelines', 'Follow-ups'],
+    stack: ['HubSpot', 'GoHighLevel', 'Zoho', 'Monday'],
+    description:
+      'HubSpot, GoHighLevel, Zoho and Monday. Leads from every channel into one pipeline, follow-ups that stop when someone replies, reminders that cut no-shows. We clean up duplicates and dead fields first so the reports are worth reading.',
+    highlights: [
+      'Every lead channel feeding one clean pipeline',
+      'Follow-up sequences that stop automatically when someone replies',
+      'Booking reminders that cut no-shows, with duplicates and dead fields cleaned first',
+    ],
+    images: [
+      { src: crmAutomation, alt: 'Leads from every channel flowing into one CRM pipeline' },
     ],
   },
   {
