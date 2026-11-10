@@ -72,6 +72,10 @@ export const projects = [
   {
     name: 'AI Caller Bot',
     role: 'Developer',
+    category: 'Automation · Voice AI',
+    icon: 'bot',
+    blurb:
+      'A full-scale AI calling system that qualifies leads or sells products over the phone — with its own lead search built in.',
     tags: ['Voice AI', 'n8n', 'Lead Qualification'],
     stack: ['n8n', 'OpenAI', 'Supabase', 'Voice AI', 'Webhooks'],
     description:
@@ -82,12 +86,16 @@ export const projects = [
       'Built-in Google lead search — bring leads or let it find them',
     ],
     images: [
-      { src: aiCallerWorkflow, alt: 'AI Caller Bot master workflow in n8n' },
+      { src: aiCallerWorkflow, alt: 'AI Caller Bot master workflow architecture' },
     ],
   },
   {
     name: 'LinkedIn Connection Requester',
     role: 'Developer',
+    category: 'Automation · Lead Generation',
+    icon: 'crm',
+    blurb:
+      'Finds exactly the right people and sends each one an AI-personalized LinkedIn connection request, tracked end to end.',
     tags: ['Lead Magnet', 'Outreach', 'PhantomBuster'],
     stack: ['n8n', 'OpenAI', 'Apify', 'PhantomBuster', 'Google Sheets'],
     description:
@@ -104,6 +112,10 @@ export const projects = [
   {
     name: 'Clyng.io',
     role: 'End-to-End Engineer',
+    category: 'SaaS · Churn Analytics',
+    icon: 'chart',
+    blurb:
+      'Churn monitoring and automated retention playbooks for subscription e-commerce — recover customers before they leave.',
     tags: ['Churn Analytics', 'Retention Playbooks', 'Subscription E-commerce'],
     stack: ['React', 'Supabase', 'n8n', 'Stripe', 'Email & SMS Automation'],
     description:
@@ -118,24 +130,41 @@ export const projects = [
       { src: clyngPlaybooks, alt: 'Clyng.io automated retention playbooks' },
     ],
   },
-]
-
-export const moreProjects = [
   {
-    icon: 'docs',
     name: 'Automated Quiz Release & Grading',
     role: 'Automation Developer',
+    category: 'Automation · Microsoft 365 Workflow',
+    icon: 'docs',
+    blurb:
+      'A release, access-control, grading and notification system spanning Microsoft Forms and SharePoint.',
+    tags: ['Microsoft 365', 'Education', 'Workflow'],
+    stack: ['Power Automate', 'SharePoint', 'Microsoft Forms'],
     description:
       'A release, access-control, grading and notification system spanning Microsoft Forms and SharePoint. Quizzes go out on schedule to exactly the right people, submissions are graded automatically, and results land in SharePoint with notifications sent — zero manual steps for the teacher.',
-    stack: ['Power Automate', 'SharePoint', 'Microsoft Forms'],
+    highlights: [
+      'Scheduled quiz release with per-group access control',
+      'Automatic grading of every submission',
+      'Results stored in SharePoint with instant notifications',
+    ],
+    images: [],
   },
   {
-    icon: 'board',
-    name: 'InwardStyle — Client Operating System',
+    name: 'InwardStyle',
     role: 'Automation Developer',
+    category: 'Automation · Airtable Client Operating System',
+    icon: 'board',
+    blurb:
+      'A focused client system that keeps prospects, consultations, next actions and exceptions moving without burdening the owner.',
+    tags: ['Airtable', 'Client Operations', 'Make.com'],
+    stack: ['Airtable', 'Make.com', 'Google Calendar'],
     description:
       'A focused Airtable-based operating system that keeps prospects, consultations, next actions and exceptions moving without burdening the owner. Airtable is the single source of truth, Make.com runs the automations behind it, and Google Calendar keeps every consultation in sync.',
-    stack: ['Airtable', 'Make.com', 'Google Calendar'],
+    highlights: [
+      'Airtable as the single source of truth for every client',
+      'Make.com automations drive next actions and exceptions',
+      'Google Calendar sync for every consultation',
+    ],
+    images: [],
   },
 ]
 

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { profile, stats, services, projects, moreProjects, tools, reasons } from './data.js'
+import { profile, stats, services, projects, tools, reasons } from './data.js'
 import avatar from './assets/avatar.jpg'
 
 /* ---------- tiny inline icon set ---------- */
@@ -220,7 +220,51 @@ function Services() {
 }
 
 /* ---------- projects ---------- */
-function Projects({ onZoom }) {
+function ProjectCard({ project, onOpen, delay }) {
+  const cover = project.images[0]
+  return (
+    <Reveal delay={delay}>
+      <article
+        className="pcard"
+        role="button"
+        tabIndex={0}
+        onClick={() => onOpen(project)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            onOpen(project)
+          }
+        }}
+        aria-label={`View details: ${project.name}`}
+      >
+        <div className="pcard__media">
+          {cover ? (
+            <img src={cover.src} alt={cover.alt} loading="lazy" />
+          ) : (
+            <div className="pcard__placeholder">
+              <Icon name={project.icon} size={54} />
+            </div>
+          )}
+          <span className="pcard__arrow">
+            <Icon name="arrow" size={17} />
+          </span>
+        </div>
+        <div className="pcard__body">
+          <p className="pcard__category">{project.category}</p>
+          <h3>{project.name}</h3>
+          <p className="pcard__blurb">{project.blurb}</p>
+          <div className="stack__chips">
+            {project.stack.map((t) => (
+              <span key={t} className="stack__chip">{t}</span>
+            ))}
+          </div>
+        </div>
+      </article>
+    </Reveal>
+  )
+}
+
+function Projects({ onOpen }) {
   return (
     <section id="projects" className="section section--alt">
       <div className="container">
@@ -228,79 +272,63 @@ function Projects({ onZoom }) {
           <p className="eyebrow">Featured Projects</p>
           <h2>Real systems, shipped and running</h2>
         </Reveal>
-        <div className="projects">
+        <div className="pgrid">
           {projects.map((p, i) => (
-            <Reveal key={p.name}>
-              <article className={`project ${i % 2 ? 'project--flip' : ''}`}>
-                <div className="project__media">
-                  {p.images.map((img) => (
-                    <button
-                      key={img.src}
-                      className="project__shot"
-                      onClick={() => onZoom(img)}
-                      aria-label={`Enlarge screenshot: ${img.alt}`}
-                    >
-                      <img src={img.src} alt={img.alt} loading="lazy" />
-                    </button>
-                  ))}
-                </div>
-                <div className="project__body">
-                  <div className="project__tags">
-                    {p.tags.map((t) => (
-                      <span key={t} className="tag">{t}</span>
-                    ))}
-                  </div>
-                  <h3>{p.name}</h3>
-                  <p className="project__role">{p.role}</p>
-                  <p>{p.description}</p>
-                  <ul className="project__highlights">
-                    {p.highlights.map((h) => (
-                      <li key={h}>
-                        <Icon name="check" size={15} /> {h}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="stack">
-                    <span className="stack__label">Built with</span>
-                    <div className="stack__chips">
-                      {p.stack.map((t) => (
-                        <span key={t} className="stack__chip">{t}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal>
-          <h3 className="more-title">More Projects</h3>
-        </Reveal>
-        <div className="more-grid">
-          {moreProjects.map((p, i) => (
-            <Reveal key={p.name} delay={i * 90}>
-              <article className="card more-card">
-                <div className="service__icon">
-                  <Icon name={p.icon} />
-                </div>
-                <h3>{p.name}</h3>
-                <p className="project__role">{p.role}</p>
-                <p className="more-card__text">{p.description}</p>
-                <div className="stack">
-                  <span className="stack__label">Built with</span>
-                  <div className="stack__chips">
-                    {p.stack.map((t) => (
-                      <span key={t} className="stack__chip">{t}</span>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            </Reveal>
+            <ProjectCard key={p.name} project={p} onOpen={onOpen} delay={(i % 2) * 80} />
           ))}
         </div>
       </div>
     </section>
+  )
+}
+
+/* ---------- project detail modal ---------- */
+function ProjectModal({ project, onClose }) {
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && onClose()
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [onClose])
+
+  return (
+    <div className="pmodal" onClick={onClose} role="dialog" aria-modal="true" aria-label={project.name}>
+      <div className="pmodal__dialog" onClick={(e) => e.stopPropagation()}>
+        <button className="pmodal__close" aria-label="Close" onClick={onClose}>
+          ×
+        </button>
+        <p className="pcard__category">{project.category}</p>
+        <h3 className="pmodal__title">{project.name}</h3>
+        <p className="project__role">{project.role}</p>
+        <div className="project__tags">
+          {project.tags.map((t) => (
+            <span key={t} className="tag">{t}</span>
+          ))}
+        </div>
+        {project.images.map((img) => (
+          <img key={img.src} className="pmodal__shot" src={img.src} alt={img.alt} />
+        ))}
+        <p className="pmodal__text">{project.description}</p>
+        <ul className="project__highlights">
+          {project.highlights.map((h) => (
+            <li key={h}>
+              <Icon name="check" size={15} /> {h}
+            </li>
+          ))}
+        </ul>
+        <div className="stack">
+          <span className="stack__label">Built with</span>
+          <div className="stack__chips">
+            {project.stack.map((t) => (
+              <span key={t} className="stack__chip">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -390,28 +418,8 @@ function Footer() {
   )
 }
 
-/* ---------- lightbox ---------- */
-function Lightbox({ image, onClose }) {
-  useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && onClose()
-    window.addEventListener('keydown', onKey)
-    document.body.style.overflow = 'hidden'
-    return () => {
-      window.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
-    }
-  }, [onClose])
-
-  return (
-    <div className="lightbox" onClick={onClose} role="dialog" aria-modal="true">
-      <img src={image.src} alt={image.alt} />
-      <button className="lightbox__close" aria-label="Close">×</button>
-    </div>
-  )
-}
-
 export default function App() {
-  const [zoomed, setZoomed] = useState(null)
+  const [activeProject, setActiveProject] = useState(null)
   const [theme, setTheme] = useState(() => {
     try {
       return localStorage.getItem('theme') || 'light'
@@ -437,7 +445,7 @@ export default function App() {
       />
       <main>
         <Hero />
-        <Projects onZoom={setZoomed} />
+        <Projects onOpen={setActiveProject} />
         <About />
         <Services />
         <Tools />
@@ -445,7 +453,9 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-      {zoomed && <Lightbox image={zoomed} onClose={() => setZoomed(null)} />}
+      {activeProject && (
+        <ProjectModal project={activeProject} onClose={() => setActiveProject(null)} />
+      )}
     </>
   )
 }
