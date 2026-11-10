@@ -5,6 +5,7 @@ import linkedinWorkflow from './assets/linkedin-workflow.jpg'
 import integrationWorkflows from './assets/integration-workflows.jpg'
 import crmAutomation from './assets/crm-automation.jpg'
 import retailWorkspace from './assets/retail-workspace.jpg'
+import nonprofitWorkspace from './assets/nonprofit-workspace.jpg'
 
 export const profile = {
   name: 'Adam Harari',
@@ -110,6 +111,26 @@ export const projects = [
     ],
     images: [
       { src: crmAutomation, alt: 'Leads from every channel flowing into one CRM pipeline' },
+    ],
+  },
+  {
+    name: 'Education Nonprofit Workspace',
+    role: 'Automation Engineer',
+    category: 'Operations · monday.com Workspace',
+    icon: 'board',
+    blurb:
+      'A custom monday.com setup bringing program dates, staff actions, shared resources and overdue work into one system.',
+    tags: ['monday.com', 'Nonprofit', 'Calendar Sync'],
+    stack: ['monday.com', 'Google Calendar', 'iCal', 'Automations'],
+    description:
+      'A custom monday.com setup brings program dates, staff actions, shared resources, and overdue work into one system. Google Calendar and iCal sync keep personal calendars aligned, while automations handle weekly summaries and reminders.',
+    highlights: [
+      'Program dates, staff actions, resources and overdue work in one system',
+      'Google Calendar and iCal sync keep personal calendars aligned',
+      'Automations send weekly summaries and reminders on their own',
+    ],
+    images: [
+      { src: nonprofitWorkspace, alt: 'monday.com education programs board with calendar sync and automations' },
     ],
   },
   {
