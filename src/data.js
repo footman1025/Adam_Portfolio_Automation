@@ -1,6 +1,7 @@
 import clyngDashboard from './assets/clyng-dashboard.jpg'
 import clyngPlaybooks from './assets/clyng-playbooks.jpg'
 import aiCallerWorkflow from './assets/ai-caller-workflow.jpg'
+import aiCallerCover from './assets/ai-caller-cover.jpg'
 import linkedinWorkflow from './assets/linkedin-workflow.jpg'
 import crmAutomation from './assets/crm-automation.jpg'
 import retailWorkspace from './assets/retail-workspace.jpg'
@@ -191,6 +192,7 @@ export const projects = [
       'Built-in Google lead search — bring leads or let it find them',
     ],
     images: [
+      { src: aiCallerCover, alt: 'AI Caller Bot system: AI routing, CSV and Google lead search into voice calls' },
       { src: aiCallerWorkflow, alt: 'AI Caller Bot master workflow architecture' },
     ],
   },
