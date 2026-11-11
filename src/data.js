@@ -1,5 +1,5 @@
 import clyngDashboard from './assets/clyng-dashboard.jpg'
-import clyngPlaybooks from './assets/clyng-playbooks.jpg'
+import clyngCover from './assets/clyng-cover.jpg'
 import aiCallerWorkflow from './assets/ai-caller-workflow.jpg'
 import aiCallerCover from './assets/ai-caller-cover.jpg'
 import linkedinWorkflow from './assets/linkedin-workflow.jpg'
@@ -235,8 +235,8 @@ export const projects = [
       'Recovery attribution across emails, SMS, discounts and calls',
     ],
     images: [
+      { src: clyngCover, alt: 'Clyng subscription retention dashboard with automated retention playbook' },
       { src: clyngDashboard, alt: 'Clyng.io live churn and revenue dashboard' },
-      { src: clyngPlaybooks, alt: 'Clyng.io automated retention playbooks' },
     ],
   },
 ]
