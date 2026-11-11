@@ -96,6 +96,26 @@ export const projects = [
     ],
   },
   {
+    name: 'Retail Operations Workspace',
+    role: 'Workspace Architect',
+    category: 'Operations · Notion Workspace',
+    icon: 'board',
+    blurb:
+      'A connected Notion workspace that replaced scattered spreadsheets, notes and paper for day-to-day retail operations.',
+    tags: ['Notion', 'Retail', 'Operations'],
+    stack: ['Notion', 'Linked Databases', 'Templates', 'Dashboards'],
+    description:
+      'A connected Notion workspace replaced scattered spreadsheets, notes, and paper. Linked databases, useful views, reusable templates, and a clear home dashboard made day-to-day retail operations navigable for non-technical staff.',
+    highlights: [
+      'Linked databases replacing scattered spreadsheets, notes and paper',
+      'Reusable templates and purpose-built views for daily tasks',
+      'A clear home dashboard non-technical staff can actually navigate',
+    ],
+    images: [
+      { src: retailWorkspace, alt: 'Notion retail operations workspace with linked databases and dashboard' },
+    ],
+  },
+  {
     name: 'GoHighLevel Launch System',
     role: 'Automation Engineer',
     category: 'Automation · Course Launches',
@@ -234,26 +254,6 @@ export const projects = [
     images: [
       { src: clyngDashboard, alt: 'Clyng.io live churn and revenue dashboard' },
       { src: clyngPlaybooks, alt: 'Clyng.io automated retention playbooks' },
-    ],
-  },
-  {
-    name: 'Retail Operations Workspace',
-    role: 'Workspace Architect',
-    category: 'Operations · Notion Workspace',
-    icon: 'board',
-    blurb:
-      'A connected Notion workspace that replaced scattered spreadsheets, notes and paper for day-to-day retail operations.',
-    tags: ['Notion', 'Retail', 'Operations'],
-    stack: ['Notion', 'Linked Databases', 'Templates', 'Dashboards'],
-    description:
-      'A connected Notion workspace replaced scattered spreadsheets, notes, and paper. Linked databases, useful views, reusable templates, and a clear home dashboard made day-to-day retail operations navigable for non-technical staff.',
-    highlights: [
-      'Linked databases replacing scattered spreadsheets, notes and paper',
-      'Reusable templates and purpose-built views for daily tasks',
-      'A clear home dashboard non-technical staff can actually navigate',
-    ],
-    images: [
-      { src: retailWorkspace, alt: 'Notion retail operations workspace with linked databases and dashboard' },
     ],
   },
 ]
