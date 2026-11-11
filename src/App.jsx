@@ -379,25 +379,117 @@ function WhyMe() {
 }
 
 /* ---------- contact ---------- */
+const enquiryTopics = [
+  'Workflow automation (n8n / Make / Zapier)',
+  'AI agents & chatbots',
+  'CRM setup (HubSpot / GoHighLevel / Zoho / Monday)',
+  'Data, SQL & BI dashboards',
+  'E-commerce & analytics',
+  'Something else',
+]
+
+// Create a free form at https://formspree.io and paste its endpoint here.
+const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+
 function Contact() {
+  const [status, setStatus] = useState('idle')
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    const form = e.currentTarget
+    setStatus('sending')
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      })
+      if (!res.ok) throw new Error('send failed')
+      setStatus('sent')
+      form.reset()
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <section id="contact" className="section contact">
       <div className="container">
-        <Reveal>
-          <div className="contact__card">
-            <p className="eyebrow">Contact</p>
-            <h2>Tell me what's eating your time</h2>
-            <p>
-              I'll map the workflow and automate it end to end. Clear milestones,
-              full ownership of everything I build, and support after launch.
-            </p>
-            <div className="contact__actions">
+        <div className="contact__grid">
+          <Reveal>
+            <div className="contact__intro">
+              <p className="eyebrow">Start something good</p>
+              <h2 className="contact__headline">
+                What are you trying to build — or stop doing{' '}
+                <em>manually?</em>
+              </h2>
+              <p>
+                Send the idea, the workflow, or the system that is getting in
+                the way. I'll map it end to end and come back with a practical
+                next step.
+              </p>
               <span className="contact__rate-badge">
                 Hourly rate&nbsp;<strong>{profile.rate}</strong>
               </span>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+          <Reveal delay={120}>
+            <form className="contact__form" onSubmit={handleSubmit}>
+              <div className="contact__row">
+                <label className="field">
+                  <span className="field__label">First name</span>
+                  <input name="firstName" type="text" placeholder="Jane" required />
+                </label>
+                <label className="field">
+                  <span className="field__label">Last name</span>
+                  <input name="lastName" type="text" placeholder="Smith" required />
+                </label>
+              </div>
+              <label className="field">
+                <span className="field__label">Work email</span>
+                <input name="email" type="email" placeholder="jane@company.com" required />
+              </label>
+              <label className="field">
+                <span className="field__label">What can I help with?</span>
+                <select name="topic" defaultValue="" required>
+                  <option value="" disabled>
+                    Select an area
+                  </option>
+                  {enquiryTopics.map((t) => (
+                    <option key={t} value={t}>
+                      {t}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="field">
+                <span className="field__label">Tell me about the project</span>
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="What are you building, what exists today, and what needs to change?"
+                  required
+                />
+              </label>
+              <button className="btn contact__submit" type="submit" disabled={status === 'sending'}>
+                {status === 'sending' ? 'Sending…' : 'Send project enquiry ↗'}
+              </button>
+              {status === 'sent' && (
+                <p className="contact__status contact__status--ok">
+                  Thanks — your enquiry is on its way. I'll get back to you shortly.
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="contact__status contact__status--err">
+                  Something went wrong sending the form. Please try again in a moment.
+                </p>
+              )}
+              <p className="contact__fineprint">
+                These details are used only to respond to your enquiry.
+              </p>
+            </form>
+          </Reveal>
+        </div>
       </div>
     </section>
   )
