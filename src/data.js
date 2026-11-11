@@ -3,6 +3,7 @@ import clyngPlaybooks from './assets/clyng-playbooks.jpg'
 import aiCallerWorkflow from './assets/ai-caller-workflow.jpg'
 import aiCallerCover from './assets/ai-caller-cover.jpg'
 import linkedinWorkflow from './assets/linkedin-workflow.jpg'
+import linkedinCover from './assets/linkedin-cover.jpg'
 import crmAutomation from './assets/crm-automation.jpg'
 import retailWorkspace from './assets/retail-workspace.jpg'
 import nonprofitWorkspace from './assets/nonprofit-workspace.jpg'
@@ -213,6 +214,7 @@ export const projects = [
       'Google Sheets tracking + automated sending via PhantomBuster',
     ],
     images: [
+      { src: linkedinCover, alt: 'AI-personalized LinkedIn connection requests powered by n8n, OpenAI, Apify, PhantomBuster and Google Sheets' },
       { src: linkedinWorkflow, alt: 'LinkedIn outreach automation workflow' },
     ],
   },
