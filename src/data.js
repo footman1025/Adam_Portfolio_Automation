@@ -117,23 +117,23 @@ export const projects = [
     ],
   },
   {
-    name: 'Affiliate Tracking Setup for NeuroAds',
-    role: 'Integration Engineer',
-    category: 'E-commerce · AI Chatbot',
-    icon: 'cart',
+    name: 'Education Nonprofit Workspace',
+    role: 'Automation Engineer',
+    category: 'Operations · monday.com Workspace',
+    icon: 'board',
     blurb:
-      'Connected affiliate referrals to a multilingual Shopify AI chatbot commerce journey through Shopify data and API integration.',
-    tags: ['Shopify', 'Affiliate Tracking', 'AI Chatbot'],
-    stack: ['Shopify', 'Affiliate Tracking', 'API Integration', 'AI Chatbot'],
+      'A custom monday.com setup bringing program dates, staff actions, shared resources and overdue work into one system.',
+    tags: ['monday.com', 'Nonprofit', 'Calendar Sync'],
+    stack: ['monday.com', 'Google Calendar', 'iCal', 'Automations'],
     description:
-      'NeuroAds is a multilingual Shopify AI chatbot for product recommendations, store questions, discount codes, order tracking, and live-agent handoff. This engagement connected affiliate referrals to the chatbot-assisted commerce journey through Shopify data, API integration, and performance analysis.',
+      'A custom monday.com setup brings program dates, staff actions, shared resources, and overdue work into one system. Google Calendar and iCal sync keep personal calendars aligned, while automations handle weekly summaries and reminders.',
     highlights: [
-      'Affiliate referrals wired into the chatbot-assisted commerce journey',
-      'Shopify data and API integration powering referral attribution',
-      'Performance analysis across referrals, sales and commissions',
+      'Program dates, staff actions, resources and overdue work in one system',
+      'Google Calendar and iCal sync keep personal calendars aligned',
+      'Automations send weekly summaries and reminders on their own',
     ],
     images: [
-      { src: neuroadsAffiliate, alt: 'NeuroAds Shopify AI chatbot with affiliate tracking dashboard' },
+      { src: nonprofitWorkspace, alt: 'monday.com education programs board with calendar sync and automations' },
     ],
   },
   {
@@ -157,23 +157,23 @@ export const projects = [
     ],
   },
   {
-    name: 'Education Nonprofit Workspace',
-    role: 'Automation Engineer',
-    category: 'Operations · monday.com Workspace',
-    icon: 'board',
+    name: 'Affiliate Tracking Setup for NeuroAds',
+    role: 'Integration Engineer',
+    category: 'E-commerce · AI Chatbot',
+    icon: 'cart',
     blurb:
-      'A custom monday.com setup bringing program dates, staff actions, shared resources and overdue work into one system.',
-    tags: ['monday.com', 'Nonprofit', 'Calendar Sync'],
-    stack: ['monday.com', 'Google Calendar', 'iCal', 'Automations'],
+      'Connected affiliate referrals to a multilingual Shopify AI chatbot commerce journey through Shopify data and API integration.',
+    tags: ['Shopify', 'Affiliate Tracking', 'AI Chatbot'],
+    stack: ['Shopify', 'Affiliate Tracking', 'API Integration', 'AI Chatbot'],
     description:
-      'A custom monday.com setup brings program dates, staff actions, shared resources, and overdue work into one system. Google Calendar and iCal sync keep personal calendars aligned, while automations handle weekly summaries and reminders.',
+      'NeuroAds is a multilingual Shopify AI chatbot for product recommendations, store questions, discount codes, order tracking, and live-agent handoff. This engagement connected affiliate referrals to the chatbot-assisted commerce journey through Shopify data, API integration, and performance analysis.',
     highlights: [
-      'Program dates, staff actions, resources and overdue work in one system',
-      'Google Calendar and iCal sync keep personal calendars aligned',
-      'Automations send weekly summaries and reminders on their own',
+      'Affiliate referrals wired into the chatbot-assisted commerce journey',
+      'Shopify data and API integration powering referral attribution',
+      'Performance analysis across referrals, sales and commissions',
     ],
     images: [
-      { src: nonprofitWorkspace, alt: 'monday.com education programs board with calendar sync and automations' },
+      { src: neuroadsAffiliate, alt: 'NeuroAds Shopify AI chatbot with affiliate tracking dashboard' },
     ],
   },
   {
