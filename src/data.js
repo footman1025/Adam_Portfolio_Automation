@@ -77,23 +77,23 @@ export const services = [
 
 export const projects = [
   {
-    name: 'Retail Operations Workspace',
-    role: 'Workspace Architect',
-    category: 'Operations · Notion Workspace',
-    icon: 'board',
+    name: 'CRM Setup & Automation',
+    role: 'Automation Engineer',
+    category: 'Automation · CRM',
+    icon: 'crm',
     blurb:
-      'A connected Notion workspace that replaced scattered spreadsheets, notes and paper for day-to-day retail operations.',
-    tags: ['Notion', 'Retail', 'Operations'],
-    stack: ['Notion', 'Linked Databases', 'Templates', 'Dashboards'],
+      'Leads from every channel into one pipeline, follow-ups that stop when someone replies, reminders that cut no-shows.',
+    tags: ['CRM', 'Pipelines', 'Follow-ups'],
+    stack: ['HubSpot', 'GoHighLevel', 'Zoho', 'Monday'],
     description:
-      'A connected Notion workspace replaced scattered spreadsheets, notes, and paper. Linked databases, useful views, reusable templates, and a clear home dashboard made day-to-day retail operations navigable for non-technical staff.',
+      'HubSpot, GoHighLevel, Zoho and Monday. Leads from every channel into one pipeline, follow-ups that stop when someone replies, reminders that cut no-shows. We clean up duplicates and dead fields first so the reports are worth reading.',
     highlights: [
-      'Linked databases replacing scattered spreadsheets, notes and paper',
-      'Reusable templates and purpose-built views for daily tasks',
-      'A clear home dashboard non-technical staff can actually navigate',
+      'Every lead channel feeding one clean pipeline',
+      'Follow-up sequences that stop automatically when someone replies',
+      'Booking reminders that cut no-shows, with duplicates and dead fields cleaned first',
     ],
     images: [
-      { src: retailWorkspace, alt: 'Notion retail operations workspace with linked databases and dashboard' },
+      { src: crmAutomation, alt: 'Leads from every channel flowing into one CRM pipeline' },
     ],
   },
   {
@@ -137,23 +137,23 @@ export const projects = [
     ],
   },
   {
-    name: 'CRM Setup & Automation',
-    role: 'Automation Engineer',
-    category: 'Automation · CRM',
-    icon: 'crm',
+    name: 'Retail Operations Workspace',
+    role: 'Workspace Architect',
+    category: 'Operations · Notion Workspace',
+    icon: 'board',
     blurb:
-      'Leads from every channel into one pipeline, follow-ups that stop when someone replies, reminders that cut no-shows.',
-    tags: ['CRM', 'Pipelines', 'Follow-ups'],
-    stack: ['HubSpot', 'GoHighLevel', 'Zoho', 'Monday'],
+      'A connected Notion workspace that replaced scattered spreadsheets, notes and paper for day-to-day retail operations.',
+    tags: ['Notion', 'Retail', 'Operations'],
+    stack: ['Notion', 'Linked Databases', 'Templates', 'Dashboards'],
     description:
-      'HubSpot, GoHighLevel, Zoho and Monday. Leads from every channel into one pipeline, follow-ups that stop when someone replies, reminders that cut no-shows. We clean up duplicates and dead fields first so the reports are worth reading.',
+      'A connected Notion workspace replaced scattered spreadsheets, notes, and paper. Linked databases, useful views, reusable templates, and a clear home dashboard made day-to-day retail operations navigable for non-technical staff.',
     highlights: [
-      'Every lead channel feeding one clean pipeline',
-      'Follow-up sequences that stop automatically when someone replies',
-      'Booking reminders that cut no-shows, with duplicates and dead fields cleaned first',
+      'Linked databases replacing scattered spreadsheets, notes and paper',
+      'Reusable templates and purpose-built views for daily tasks',
+      'A clear home dashboard non-technical staff can actually navigate',
     ],
     images: [
-      { src: crmAutomation, alt: 'Leads from every channel flowing into one CRM pipeline' },
+      { src: retailWorkspace, alt: 'Notion retail operations workspace with linked databases and dashboard' },
     ],
   },
   {
