@@ -90,10 +90,20 @@ h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); margin-bottom: 14px; }
 h3 { font-size: 1.12rem; font-weight: 700; }
 
 .accent {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent));
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: accent-shimmer 6s ease-in-out infinite;
+}
+@keyframes accent-shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .eyebrow {
@@ -112,8 +122,8 @@ h3 { font-size: 1.12rem; font-weight: 700; }
 /* ---------- reveal ---------- */
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transform: translateY(26px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .reveal--shown {
   opacity: 1;
@@ -122,6 +132,10 @@ h3 { font-size: 1.12rem; font-weight: 700; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
+  .accent,
+  .hero__portrait,
+  .hero__portrait::before,
+  .dot { animation: none !important; }
 }
 
 /* ---------- buttons ---------- */
@@ -303,6 +317,15 @@ h3 { font-size: 1.12rem; font-weight: 700; }
 .hero__portrait {
   position: relative;
   max-width: 340px;
+  animation: hero-float 6.5s ease-in-out infinite;
+}
+@keyframes hero-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 .hero__portrait img {
   border-radius: 24px;
@@ -319,6 +342,15 @@ h3 { font-size: 1.12rem; font-weight: 700; }
   z-index: -1;
   filter: blur(20px);
   opacity: 0.7;
+  animation: glow-breathe 6.5s ease-in-out infinite;
+}
+@keyframes glow-breathe {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.95;
+  }
 }
 .hero__badge {
   position: absolute;
