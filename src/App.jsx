@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { profile, stats, services, projects, tools, reasons } from './data.js'
 import avatar from './assets/avatar.jpg'
-import ctaBanner from './assets/cta-banner.jpg'
 
 /* ---------- tiny inline icon set ---------- */
 const paths = {
@@ -392,28 +391,6 @@ function WhyMe() {
   )
 }
 
-/* ---------- CTA banner ---------- */
-function CtaBanner() {
-  return (
-    <section className="cta" style={{ backgroundImage: `url(${ctaBanner})` }}>
-      <div className="container cta__inner">
-        <Reveal>
-          <h2 className="cta__title">
-            Have something that needs
-            <br />
-            building, or fixing?
-          </h2>
-        </Reveal>
-        <Reveal delay={120}>
-          <a href="#contact" className="cta__btn">
-            Start a conversation
-          </a>
-        </Reveal>
-      </div>
-    </section>
-  )
-}
-
 /* ---------- contact ---------- */
 const enquiryTopics = [
   'Workflow automation (n8n / Make / Zapier)',
@@ -582,7 +559,6 @@ export default function App() {
         <Services />
         <Tools />
         <WhyMe />
-        <CtaBanner />
         <Contact />
       </main>
       <Footer />
