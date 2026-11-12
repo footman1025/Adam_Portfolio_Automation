@@ -749,20 +749,34 @@ h3 { font-size: 1.12rem; font-weight: 700; }
   text-align: center;
   opacity: 0.8;
 }
-.contact__rate-badge {
+.contact__points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 34px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  max-width: 520px;
+}
+.contact__point {
   display: inline-flex;
   align-items: center;
-  padding: 13px 28px;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  border: 1px solid var(--accent-border);
-  color: var(--text-dim);
-  font-size: 0.98rem;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
 }
-.contact__rate-badge strong {
+.contact__point-num {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-border);
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 1.05rem;
+  font-size: 0.68rem;
+  font-weight: 500;
 }
 
 /* ---------- footer ---------- */

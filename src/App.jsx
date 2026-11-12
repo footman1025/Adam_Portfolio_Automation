@@ -420,17 +420,25 @@ function Contact() {
             <div className="contact__intro">
               <p className="eyebrow">Start something good</p>
               <h2 className="contact__headline">
-                What are you trying to build — or stop doing{' '}
-                <em>manually?</em>
+                Fast, reliable and detail-driven — automation{' '}
+                <em>done right.</em>
               </h2>
               <p>
                 Send the idea, the workflow, or the system that is getting in
                 the way. I'll map it end to end and come back with a practical
                 next step.
               </p>
-              <span className="contact__rate-badge">
-                Hourly rate&nbsp;<strong>{profile.rate}</strong>
-              </span>
+              <div className="contact__points">
+                <span className="contact__point">
+                  <span className="contact__point-num">01</span> Clear scope
+                </span>
+                <span className="contact__point">
+                  <span className="contact__point-num">02</span> Practical plan
+                </span>
+                <span className="contact__point">
+                  <span className="contact__point-num">03</span> You own the result
+                </span>
+              </div>
             </div>
           </Reveal>
           <Reveal delay={120}>
