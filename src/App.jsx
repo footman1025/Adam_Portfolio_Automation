@@ -339,8 +339,21 @@ function Tools() {
         </Reveal>
         <Reveal delay={100}>
           <div className="tools">
-            {tools.map((t) => (
-              <span key={t} className="tool">{t}</span>
+            {[
+              { items: tools.slice(0, Math.ceil(tools.length / 2)), dir: 'right' },
+              { items: tools.slice(Math.ceil(tools.length / 2)), dir: 'left' },
+            ].map((row) => (
+              <div key={row.dir} className={`marquee marquee--${row.dir}`}>
+                <div className="marquee__track">
+                  {[0, 1, 2].map((dup) => (
+                    <div key={dup} className="marquee__group" aria-hidden={dup > 0}>
+                      {row.items.map((t) => (
+                        <span key={t} className="tool">{t}</span>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </Reveal>
