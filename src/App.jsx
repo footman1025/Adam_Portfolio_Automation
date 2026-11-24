@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { profile, stats, services, projects, tools, reasons } from './data.js'
 import avatar from './assets/avatar.jpg'
 
@@ -527,15 +527,36 @@ function Footer() {
   )
 }
 
+// Direct links such as /projects (including a double slash) open that section.
+function sectionIdFromLocation() {
+  const path = window.location.pathname.replace(/\/+/g, '/').replace(/^\/|\/$/g, '')
+  const hash = window.location.hash.replace(/^#/, '')
+  const candidates = []
+  if (hash) candidates.push(hash)
+  if (path && !path.includes('/')) candidates.push(path)
+  return candidates.find((id) => document.getElementById(id)) || null
+}
+
 export default function App() {
   const [activeProject, setActiveProject] = useState(null)
   const [theme, setTheme] = useState(() => {
     try {
-      return localStorage.getItem('theme') || 'light'
+      if (localStorage.getItem('theme-default') !== 'dark') {
+        localStorage.setItem('theme-default', 'dark')
+        localStorage.setItem('theme', 'dark')
+        return 'dark'
+      }
+      return localStorage.getItem('theme') === 'light' ? 'light' : 'dark'
     } catch {
-      return 'light'
+      return 'dark'
     }
   })
+
+  useLayoutEffect(() => {
+    const id = sectionIdFromLocation()
+    if (!id) return
+    document.getElementById(id).scrollIntoView({ behavior: 'auto', block: 'start' })
+  }, [])
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
